@@ -1,0 +1,169 @@
+*{
+    margin:0;
+}
+body, html{
+    margin:0;
+    min-height:100%;
+    min-width: 100%;
+}
+.outer-container{
+    background-image: url('rectangle.svg');
+    background-position: center;
+    background-size: cover;
+
+    box-sizing: border-box;
+    width:100%;
+    min-height: 525px;
+    padding:20px;
+
+}
+.outer-container > div{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+}
+
+.outer-container h1, .link-text-mobile span{
+    font-weight: bold;
+    color:red;
+}
+.desktop-link, #MA-map{
+    display: none;
+}
+ul{
+    list-style-type: none;
+    padding-left: 0;
+    border: 1px solid #0f0f0f;
+    max-width: 240px;
+    margin-top:50px;
+}
+a{
+    text-decoration: none;
+}
+li{
+    padding:10px;
+    border: 1px solid #0f0f0f;
+    transition: 0.5s ease all;
+}
+li:hover{
+    background-color:rgb(200, 200, 200);
+    transition: 0.5s ease all;
+}
+
+#mobile-view-links img{
+    width: 50px;
+    margin-right: 10px;
+}
+.link-mobile{
+    display:flex;
+    color:black;
+}
+@media only screen and (max-width: 450px) {
+    ul{
+        font-size: 12px;
+        max-width: 180px;
+    }
+}
+
+.outer-container h1, .link-text-mobile span{
+    font-weight: bold;
+    color:red;
+}
+.pm-link-mobile{
+    text-align: center;
+    position:relative;
+    padding-top:20px;
+    color:black;
+
+}
+.pm-link-mobile span{
+    background-color: red;
+    padding:5px;
+    color:white;
+}
+.pm-link-mobile .pm-link-text-mobile{
+    line-height: 1.5;
+    font-weight: bold;
+}
+#pm-dust{
+    position:absolute;
+    top:10px;
+    left:50%;
+    transform: translateX(-50%);
+    /* Likely also want to set width here too. */
+}
+
+
+#lungs{
+    align-self: center;
+    z-index: 10;
+}
+#lungs img{
+    width: 35vw;
+    max-width: 300px;
+}
+
+@media only screen and (min-width: 600px) {
+    .outer-container{
+        padding:50px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    h1{
+        font-size: 48px;
+        margin-left:50px;
+    }
+    #mobile-view-links{
+        display: none;
+    }
+    #MA-map{
+        display: inherit;
+        position:absolute;
+        width:70%;
+        max-width: 700px;
+        top:50px;
+        transform: translateX(-50%);
+        left:50%;
+        transition: 0.5s ease-out all;
+        filter: drop-shadow(1px 2px 5px #888888);
+    }
+    #MA-map:hover{
+        transform: translate(-50%, 10px);
+        transition: 0.5s ease-out all;
+    }
+
+
+    .desktop-link{
+        display: inline-block;
+        width:200px;
+        position:absolute;
+        transition: 0.5s ease-in all;
+    }
+    .desktop-link:hover{
+        transform: translateY(5px);
+        transition: 0.5s ease-out all;
+    }
+    #desktop-link-1{
+        top:140px;
+        left:4%;
+    }
+    #desktop-link-2{
+        top:300px;
+        left:12%;
+    }
+    #desktop-link-3{
+        top:60px;
+        left:42%;
+    }
+    #desktop-link-4{
+        top:200px;
+        left:32%;
+    }
+    #desktop-link-5{
+        top:300px;
+        left:49%;
+    }
+}
